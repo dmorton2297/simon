@@ -64,25 +64,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func squareTapped(view sender: UIView) {
-        if (userTurn) {
-            if (view.accessibilityLabel == "\(self.litSquares[currPress])") {
-                self.messageLabel.text = "Correct!"
-                self.currPress = self.currPress + 1
-                if (self.currPress == 3) {
-                    self.currPress = 0
-                    self.userTurn = false
-                    self.litSequence = []
-                    self.messageLabel.text = "Press Start"
-                }
-            } else {
-                self.messageLabel.text = "Press Start"
-                self.currPress = 0
-                self.userTurn = false
-                self.litSequence = []
-            }
-        }
-    }
     
 
 }
